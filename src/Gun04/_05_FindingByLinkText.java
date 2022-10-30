@@ -20,6 +20,10 @@ public class _05_FindingByLinkText {
         System.out.println("link.getAttribute(href) = " + link.getAttribute("href"));
         System.out.println("link.getAttribute(title) = " + link.getAttribute("title"));
         System.out.println("link.getAttribute(rel) = " + link.getAttribute("rel"));
+        
+        WebElement link2=driver.findElement(By.partialLinkText("Süper Fiyat"));// linkin görünen textinin bir kısmı ile bulma
+        //sadece a TAG leri için özel locator bulma yöntemi
+        System.out.println("link2.getText() = " + link2.getText());
 
 
 
