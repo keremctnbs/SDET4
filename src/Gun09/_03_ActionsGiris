@@ -1,0 +1,9 @@
+Interview Soruları :
+Action Class nedir ? nerelerde kullanılır ? neler yapabilirsiniz ?
+WebElementlerde kullanılır
+
+Hoverover, doubleClick, rightClick, drag and drop,
+özel tuşlara basma (shifti,ctrl,yön tuşları)
+
+Action sınıfını nasıl kullanırsın ?
+Actions aksiyonlar=new Actions(driver); // driver üzerinden aksiyonları kullanacağız

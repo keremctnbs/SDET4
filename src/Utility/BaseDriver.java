@@ -13,6 +13,7 @@ public class BaseDriver {
 
     static
     {
+
         Logger logger= Logger.getLogger(""); // bütün loglara ulaştım
         logger.setLevel(Level.SEVERE);// sadece errorları göster
 
@@ -23,7 +24,7 @@ public class BaseDriver {
         driver.manage().window().maximize(); // ekranı max yapıyor
         driver.manage().deleteAllCookies(); // sitenin senin bilgisayarında yaptığı ayarlar siliniyor
 
-        Duration dr=Duration.ofSeconds(30);
+        Duration dr=Duration.ofSeconds(5);
         driver.manage().timeouts().pageLoadTimeout(dr);// sadece tüm sayfanın kodlarının bilgisayarınıza inmesi süresiyle ilgili
         //bu eklenmezse selenium sayfa yüklenene kadar(sonsuza) bekler: 30 sn süresince sayfanın yüklenmesini bekle yüklenmezse hata ver
         // eğer 2 sn yüklerse 30 sn beklemez
@@ -31,11 +32,19 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(dr);// bütün webelemenetlerin element bazında elemente özel işlem yapılmadan önce
         // hazır hale gelmesi verilen mühlet yani süre
 
-    }
+        
+
+        }
+
     public static void driverBekleKapat()
-    {
-        MyFunc.bekle(10);
-        driver.quit();
+
+        {
+            MyFunc.bekle(10);
+            driver.quit();
+        }
+
 
     }
-}
+
+
+

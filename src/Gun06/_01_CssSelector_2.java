@@ -15,6 +15,7 @@ public class _01_CssSelector_2 extends BaseDriver {
 
         driver.get("https://demo.seleniumeasy.com/basic-first-form-demo.html");
 
+        String mesajim="merhaba selenium";
         WebElement txtBox=driver.findElement(By.cssSelector("input[id=['user-message']"));
         txtBox.sendKeys("merhaba selenium");
 
@@ -23,15 +24,17 @@ public class _01_CssSelector_2 extends BaseDriver {
 
         WebElement msg=driver.findElement(By.cssSelector("span[id='display']"));
 
-        if (msg.getText().contains("merhaba selenium"))
-            System.out.println("test passed");
-        else
-            System.out.println("test failed");
+  //      if (msg.getText().contains("merhaba selenium"))
+        //        System.out.println("test passed");
+      //  else
+        //    System.out.println("test failed");
 
-        Assert.assertTrue(msg.getText().contains("merhaba selenium"));
+        Assert.assertTrue( mesajim+" mesaj bulunamadı" ,msg.getText().contains(mesajim));
         //assertTrue: içindeki değer true mu ? true ise hiçbir şey yapmaz mesaj vermez
         //değilse değilse beklenen olmamışsa hata mesajı verir
         //yani genel kural: hata var ise göster
+
+        driverBekleKapat();
 
 
 

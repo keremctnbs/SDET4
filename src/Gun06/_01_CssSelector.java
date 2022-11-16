@@ -32,6 +32,8 @@ public class _01_CssSelector extends BaseDriver {
         //değilse değilse beklenen olmamışsa hata mesajı verir
         //yani genel kural: hata var ise göster
 
+        driverBekleKapat();
+
 
 
 
